@@ -1,6 +1,6 @@
 # SchedulingAlgorithms
 
-####Implementation of Round Robin and First Come First Serve:
+Implementation of Round Robin and First Come First Serve:
 - Round Robin
 
 If the process’ burst time is more than the time slice, the total time should be incremented with the value of the time slice and and the burst time should be decremented with the value of the time slice, then the process is marked as not completed.
@@ -29,7 +29,7 @@ Each process wait for the previous process to finish to start execution.
 These 2 algorithms are implemented in the same C file.
 
 In a seperate C file There is the implemetaion of 
-####Multilevel Feedback Queue Scheduling.
+Multilevel Feedback Queue Scheduling.
 
 It contains 5 queues, where each queue has a quantum of (4,8,16,32,64) respectively. We also declare a process for each queue which resembles the process being executed by the queue aswell as a boolean variable for each queue whether the process is being executed or not. We first start by populating the first queue with all the process, then we start the scheduler by creating a while loop that keeps looping aslong as the queues aren't empty and are still executing a process. Each queue has 4 states, either it isn't executing a process, in which case it will pop from its queue a process and start executing(which will assign the response time if in the first queue)
 
